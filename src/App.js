@@ -54,14 +54,16 @@ function App() {
           <table className="styled-table">
             <thead>
               <tr>
+                <th>SNo.</th>
                 <th>City</th>
                 <th>Count</th>
                 <th>Average Income</th>
               </tr>
             </thead>
             <tbody>
-              {topCities.map((city) => (
+              {topCities.map((city,index) => (
                 <tr key={city.city}>
+                  <td>{index + 1}</td>
                   <td>{city.city}</td>
                   <td>{city.count}</td>
                   <td>{city.avgIncome}</td>
@@ -73,6 +75,7 @@ function App() {
           <table className="styled-table">
             <thead>
               <tr>
+                <th>SNo.</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -85,8 +88,9 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {users.map((user) => (
+              {users.map((user,index) => (
                 <tr key={user.id}>
+                  <td>{index + 1}</td>
                   <td>{user.first_name}</td>
                   <td>{user.last_name}</td>
                   <td>{user.email}</td>
