@@ -8,7 +8,7 @@ function App() {
   const [topCities, setTopCities] = useState([]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/users/${selectedEndpoint}`)
+    fetch(`https://assignment-backend-1lw9.onrender.com/users/${selectedEndpoint}`)
       .then((response) => response.json())
       .then((data) => {
         if (selectedEndpoint === 'API-5') {
